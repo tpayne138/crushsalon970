@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crush Salon & Day Spa | Hair Salon, Day Spa & Lashes in Grand Junction, CO</title>
+<meta name="description" content="Crush Salon & Day Spa in Grand Junction, CO. Cuts, color, balayage, curly cuts, extensions, braids, lash extensions, facials, massage, nails and spa days. Valley Plaza on US-6 & 50. Book online or call (970) 628-1732.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap">
+<style>
+/* Layout: a warm ivory page with one wine-colored band for the spa, generous whitespace, photos cropped tall and editorial */
+:root{
+  --bg:#FBF7F3;          /* warm ivory */
+  --bg2:#F2E9E3;         /* blush card ground */
+  --ink:#2A1D20;         /* warm near-black */
+  --muted:#6F5E62;       /* taupe text */
+  --wine:#6B2435;        /* brand accent */
+  --wine-deep:#4A1724;
+  --rose:#D4A59A;        /* rose-gold trim */
+  --line:#E3D6CF;
+  --display:"Fraunces",Georgia,"Times New Roman",serif;
+  --body:"Instrument Sans","Helvetica Neue",Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.08;margin:0;text-wrap:balance}
+h1{font-size:clamp(2.6rem,6.5vw,5.2rem);font-variation-settings:"opsz" 144}
+h2{font-size:clamp(2rem,4.2vw,3.3rem);font-variation-settings:"opsz" 120}
+h3{font-size:1.45rem}
+p{margin:0}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.eyebrow{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--wine);font-weight:600}
+.btn{display:inline-flex;align-items:center;gap:.5rem;padding:.9rem 1.5rem;border-radius:999px;font-weight:600;text-decoration:none;font-size:.95rem;letter-spacing:.02em;transition:transform .15s ease,background .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn-primary{background:var(--wine);color:#fff}
+.btn-primary:hover{background:var(--wine-deep)}
+.btn-ghost{border:1.5px solid var(--ink);color:var(--ink);background:transparent}
+.btn-light{background:#fff;color:var(--wine)}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(251,247,243,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px;gap:1rem}
+.logo{font-family:var(--display);font-size:1.7rem;letter-spacing:.14em;text-decoration:none;font-weight:500}
+.logo small{display:block;font-family:var(--body);font-size:.62rem;letter-spacing:.28em;color:var(--muted);font-weight:600;margin-top:-2px}
+.links{display:flex;gap:1.6rem;list-style:none;margin:0;padding:0;font-size:.92rem;font-weight:500}
+.links a{text-decoration:none;color:var(--ink)}
+.links a:hover{color:var(--wine)}
+.nav .btn{padding:.65rem 1.2rem;font-size:.85rem}
+.menu-btn{display:none;background:none;border:1.5px solid var(--ink);border-radius:8px;padding:.45rem .6rem;font:inherit;font-size:.85rem;font-weight:600;color:var(--ink)}
+@media(max-width:860px){
+  .links{display:none;position:absolute;left:0;right:0;top:72px;background:var(--ink);color:#fff;flex-direction:column;gap:0;padding:.5rem 0 1rem}
+  .links.open{display:flex}
+  .links li{padding:0}
+  .links a{display:block;padding:.95rem 24px;color:#fff;font-size:1.05rem;border-bottom:1px solid rgba(255,255,255,.12)}
+  .menu-btn{display:inline-block}
+  .nav .btn-primary{display:none}
+}
+
+/* hero */
+.hero{padding-block:3.5rem 2rem}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:3rem;align-items:center}
+.hero h1 em{font-style:italic;color:var(--wine)}
+.hero p.lead{font-size:1.15rem;color:var(--muted);max-width:34rem;margin-top:1.3rem}
+.hero .cta{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:2rem}
+.hero .meta{margin-top:2rem;display:flex;gap:2rem;flex-wrap:wrap;font-size:.9rem;color:var(--muted)}
+.hero .meta b{display:block;color:var(--ink);font-weight:600}
+.collage{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:260px 200px;gap:12px}
+.collage img{width:100%;height:100%;object-fit:cover;border-radius:14px}
+.collage img:first-child{grid-row:1/3}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr}.collage{grid-template-rows:220px 160px}}
+
+/* strip */
+.strip{background:var(--ink);color:#fff}
+.strip .wrap{display:flex;gap:1.5rem;align-items:center;justify-content:space-between;padding-block:1rem;flex-wrap:wrap}
+.strip p{font-size:.98rem}
+.strip .dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:#7CC58C;margin-right:.6rem;box-shadow:0 0 0 4px rgba(124,197,140,.22)}
+
+/* sections */
+section{padding-block:5rem}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:2rem;margin-bottom:2.5rem;flex-wrap:wrap}
+.sec-head p{color:var(--muted);max-width:32rem}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
+.card{background:var(--bg2);border-radius:18px;overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:transform .2s ease}
+.card:hover{transform:translateY(-4px)}
+.card img{height:230px;width:100%;object-fit:cover}
+.card .body{padding:1.2rem 1.3rem 1.4rem;display:flex;flex-direction:column;gap:.4rem;flex:1}
+.card .from{margin-top:auto;padding-top:.8rem;font-size:.85rem;color:var(--wine);font-weight:600}
+.card p{font-size:.93rem;color:var(--muted)}
+@media(max-width:960px){.cards{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.cards{grid-template-columns:1fr}}
+
+/* prices */
+.prices{background:var(--bg2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.tabs{display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:2rem}
+.tab{border:1.5px solid var(--line);background:#fff;border-radius:999px;padding:.55rem 1.1rem;font:inherit;font-size:.9rem;font-weight:600;cursor:pointer;color:var(--ink)}
+.tab[aria-selected="true"]{background:var(--wine);border-color:var(--wine);color:#fff}
+.panel{display:none}
+.panel.on{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem 4rem}
+@media(max-width:860px){.panel.on{grid-template-columns:1fr}}
+.pl h3{margin-bottom:.9rem;padding-bottom:.5rem;border-bottom:1.5px solid var(--rose)}
+.pl ul{list-style:none;margin:0;padding:0}
+.pl li{display:flex;justify-content:space-between;gap:1rem;padding:.55rem 0;border-bottom:1px dotted var(--line);font-size:.97rem}
+.pl li span:last-child{white-space:nowrap;font-variant-numeric:tabular-nums;font-weight:600}
+.pl li small{display:block;color:var(--muted);font-size:.84rem;line-height:1.45;margin-top:.15rem}
+.note{font-size:.88rem;color:var(--muted);margin-top:1.2rem}
+
+/* spa band */
+.spa{background:var(--wine);color:#fff}
+.spa .eyebrow{color:var(--rose)}
+.spa-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center}
+.spa img{border-radius:18px;height:460px;width:100%;object-fit:cover}
+.pk{display:grid;gap:.9rem;margin-top:1.8rem}
+.pk div{border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:1rem 1.2rem;display:flex;justify-content:space-between;gap:1rem;align-items:baseline}
+.pk b{font-family:var(--display);font-size:1.25rem;font-weight:500}
+.pk small{display:block;opacity:.85;font-size:.86rem;margin-top:.2rem}
+.pk .pr{font-weight:700;white-space:nowrap}
+@media(max-width:860px){.spa-grid{grid-template-columns:1fr}.spa img{height:300px}}
+
+/* team */
+.team{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.member img,.member .ph{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:16px;background:var(--bg2)}
+.member .ph{display:grid;place-items:center;font-family:var(--display);font-size:4rem;color:var(--rose)}
+.member h3{margin-top:1rem}
+.member .role{font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;color:var(--wine);font-weight:600;margin:.2rem 0 .6rem}
+.member p{font-size:.95rem;color:var(--muted)}
+.member .ig{font-size:.88rem;margin-top:.5rem;display:inline-block}
+@media(max-width:860px){.team{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.team{grid-template-columns:1fr}}
+
+/* reviews + hiring */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem}
+.block{border-radius:20px;padding:2.2rem;background:var(--bg2)}
+.block.dark{background:var(--ink);color:#fff}
+.block.dark .eyebrow{color:var(--rose)}
+.block h2{font-size:2rem;margin:.4rem 0 .9rem}
+.block p{color:var(--muted)}
+.block.dark p{color:rgba(255,255,255,.8)}
+.block .btn{margin-top:1.4rem}
+.stars{color:#E0A33B;letter-spacing:.1em;font-size:1.1rem}
+@media(max-width:860px){.two{grid-template-columns:1fr}}
+
+/* visit */
+.visit-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.hours{list-style:none;padding:0;margin:1rem 0 0}
+.hours li{display:flex;justify-content:space-between;padding:.5rem 0;border-bottom:1px dotted var(--line);font-size:.97rem}
+.visit a.big{font-family:var(--display);font-size:1.7rem;text-decoration:none;color:var(--wine)}
+.visit .addr{font-size:1.05rem;margin-top:1rem;line-height:1.5}
+.visit img{border-radius:18px;height:100%;width:100%;object-fit:cover;min-height:320px}
+@media(max-width:860px){.visit-grid{grid-template-columns:1fr}}
+
+footer{border-top:1px solid var(--line);padding-block:2rem;font-size:.85rem;color:var(--muted)}
+footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
+footer a{text-decoration:none}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top">CRUSH<small>SALON &amp; DAY SPA</small></a>
+    <ul class="links" id="links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#prices">Prices</a></li>
+      <li><a href="#spa">Spa days</a></li>
+      <li><a href="#team">Team</a></li>
+      <li><a href="#hiring">Careers</a></li>
+      <li><a href="#visit">Visit</a></li>
+    </ul>
+    <a class="btn btn-primary" href="https://book.squareup.com/appointments/763bb7c7-40e5-450f-980e-d199f9eb9685/location/70V0BRZFX04NW/services">Book now</a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="links">Menu</button>
+  </div>
+</header>
+
+<section class="hero wrap" id="top">
+  <div class="hero-grid">
+    <div>
+      <div class="eyebrow">Grand Junction · Valley Plaza</div>
+      <h1>Hair, spa &amp; lashes, <em>done right.</em></h1>
+      <p class="lead">Cuts, color, curly cuts, extensions, braids, lash extensions, facials, massage, nails and full spa days. One salon, a team that actually listens, and products we trust on our own hair.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="https://book.squareup.com/appointments/763bb7c7-40e5-450f-980e-d199f9eb9685/location/70V0BRZFX04NW/services">Book online</a>
+        <a class="btn btn-ghost" href="tel:+19706281732">Call (970) 628-1732</a>
+      </div>
+      <div class="meta">
+        <div><b>Tue – Sat</b> 10 am – 6 pm</div>
+        <div><b>Monday</b> by appointment</div>
+        <div><b>New clients</b> openings this week</div>
+      </div>
+    </div>
+    <div class="collage">
+      <img src="https://static.wixstatic.com/media/b6c1e7_fcbe8bd49076453aa5eb6cfb4973ae82~mv2.jpg/v1/fill/w_700,h_940,al_c,q_85/salon.jpg" alt="Styling chairs at Crush Salon">
+      <img src="https://static.wixstatic.com/media/b6c1e7_94feba63f79a4e5a880b76fb215ed974~mv2.jpg/v1/fill/w_600,h_520,al_c,q_85/blonde.jpg" alt="Dimensional blonde color">
+      <img src="https://static.wixstatic.com/media/b6c1e7_0d2eb08bdc3a42c2ae611258d34cd41b~mv2.jpg/v1/fill/w_600,h_400,al_c,q_85/lash.jpg" alt="Lash extensions">
+    </div>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="wrap">
+    <p><span class="dot"></span><strong>Now taking new clients.</strong> We have openings all week, including Mondays by appointment.</p>
+    <a class="btn btn-light" href="https://book.squareup.com/appointments/763bb7c7-40e5-450f-980e-d199f9eb9685/location/70V0BRZFX04NW/services">See open times</a>
+  </div>
+</div>
+
+<section class="wrap" id="services">
+  <div class="sec-head">
+    <div><div class="eyebrow">What we do</div><h2>Everything under one roof</h2></div>
+    <p>Hair up front, spa in the back. Book one service or stack a few and make a day of it.</p>
+  </div>
+  <div class="cards">
+    <a class="card" href="#prices" data-tab="hair">
+      <img src="https://static.wixstatic.com/media/b6c1e7_615859bb47ca40a5b2446a90bca82530~mv2.jpg/v1/fill/w_520,h_460,al_c,q_85/color.jpg" alt="Foils being applied">
+      <div class="body"><h3>Hair</h3><p>Cuts, blonding, balayage, all-over color, specialty curly cuts, braids and twists, Brazilian blowouts, tape-in, sew-in, K-tip and V-light extensions.</p><span class="from">Cuts from $25 · Color from $85</span></div>
+    </a>
+    <a class="card" href="#prices" data-tab="nails">
+      <img src="https://static.wixstatic.com/media/b6c1e7_7afd60ee9052484e8bb55d78d345ff99~mv2.jpg/v1/fill/w_520,h_460,al_c,q_85/nails.jpg" alt="Hand-painted nail art">
+      <div class="body"><h3>Nails</h3><p>Manicures, pedicures, gel polish, Gel-X, acrylics, paraffin and nail art.</p><span class="from">Manicures from $25 · Pedicures from $35</span></div>
+    </a>
+    <a class="card" href="#prices" data-tab="lashes">
+      <img src="https://static.wixstatic.com/media/b6c1e7_60d1811a4a6f4e5483f14ca345107594~mv2.jpg/v1/fill/w_520,h_460,al_c,q_85/lashes.jpg" alt="Classic lash extensions">
+      <div class="body"><h3>Lashes &amp; brows</h3><p>Classic and volume extensions, fills, lifts and tints, brow shaping, tinting and waxing.</p><span class="from">Full sets from $175 · Lifts $45</span></div>
+    </a>
+    <a class="card" href="#prices" data-tab="massage">
+      <img src="https://static.wixstatic.com/media/11062b_701ecff590564465a24fc9c5f63f848a~mv2.jpeg/v1/fill/w_520,h_460,al_c,q_85/massage.jpg" alt="Massage therapy">
+      <div class="body"><h3>Spa &amp; skin</h3><p>Massage, hot stone, cupping, custom facials, dermaplaning, microdermabrasion, peels, body scrub and wrap with our Vichy shower.</p><span class="from">Massage from $80 · Facials from $90</span></div>
+    </a>
+  </div>
+</section>
+
+<section class="prices" id="prices">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="eyebrow">Menu</div><h2>Services &amp; prices</h2></div>
+      <p>Prices marked + start there and depend on length, density and time. Not sure what you need? Book a consultation and we'll map it out together.</p>
+    </div>
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" aria-selected="true" data-panel="hair">Hair</button>
+      <button class="tab" role="tab" aria-selected="false" data-panel="nails">Nails</button>
+      <button class="tab" role="tab" aria-selected="false" data-panel="facials">Facials</button>
+      <button class="tab" role="tab" aria-selected="false" data-panel="massage">Massage &amp; body</button>
+      <button class="tab" role="tab" aria-selected="false" data-panel="lashes">Lashes</button>
+      <button class="tab" role="tab" aria-selected="false" data-panel="waxing">Waxing &amp; brows</button>
+    </div>
+
+    <div class="panel on" id="p-hair">
+      <div class="pl"><h3>Cuts &amp; styling</h3><ul>
+        <li><span>Women's haircut</span><span>$50</span></li>
+        <li><span>Men's haircut</span><span>$35</span></li>
+        <li><span>Kids' haircut</span><span>$25</span></li>
+        <li><span>Specialty curly cut<small>Cut dry, curl by curl, for your pattern.</small></span><span>Consultation</span></li>
+        <li><span>Shampoo &amp; style</span><span>$40</span></li>
+        <li><span>Special occasion style</span><span>$65+</span></li>
+        <li><span>Wedding parties<small>Packages available for the whole party.</small></span><span>Consultation</span></li>
+        <li><span>Brazilian blowout</span><span>$200+</span></li>
+        <li><span>Braids &amp; twists</span><span>Consultation</span></li>
+        <li><span>Extensions<small>Tape-in, sew-in weft, K-tip and V-light.</small></span><span>Consultation</span></li>
+      </ul></div>
+      <div class="pl"><h3>Color</h3><ul>
+        <li><span>Full highlights</span><span>$150+</span></li>
+        <li><span>Partial highlights</span><span>$110+</span></li>
+        <li><span>Double color highlight</span><span>$150+</span></li>
+        <li><span>Balayage</span><span>$140+</span></li>
+        <li><span>All-over color</span><span>$100+</span></li>
+        <li><span>Color retouch</span><span>$85+</span></li>
+        <li><span>Toner / gloss</span><span>$30+</span></li>
+      </ul><p class="note">We color with Davines, a natural, sustainable line that keeps hair healthy between visits.</p></div>
+    </div>
+
+    <div class="panel" id="p-nails">
+      <div class="pl"><h3>Manicures</h3><ul>
+        <li><span>Basic manicure<small>Clip, file, cuticle care, massage, polish. 30 min.</small></span><span>$25</span></li>
+        <li><span>Spa manicure<small>Adds an exfoliating scrub. 60 min.</small></span><span>$35</span></li>
+        <li><span>Gel polish manicure<small>High-gloss soak-off gel, wears up to 2 weeks.</small></span><span>$45</span></li>
+        <li><span>Gel-X full set<small>Full-coverage tip with soft gel. Alternative to acrylic.</small></span><span>$65+</span></li>
+        <li><span>Gel-X fill</span><span>$50+</span></li>
+        <li><span>Acrylic full set</span><span>$50+</span></li>
+        <li><span>Acrylic fill</span><span>$35+</span></li>
+      </ul></div>
+      <div class="pl"><h3>Pedicures &amp; add-ons</h3><ul>
+        <li><span>Express pedicure<small>Soak, clip, file, cuticle care, exfoliation, polish. 30 min.</small></span><span>$35</span></li>
+        <li><span>Spa pedicure<small>Adds sugar scrub, mask and massage. 60 min.</small></span><span>$45</span></li>
+        <li><span>Deluxe pedicure<small>Adds paraffin treatment. 60 min.</small></span><span>$55</span></li>
+        <li><span>Gel polish add-on</span><span>$10</span></li>
+        <li><span>Nail art</span><span>$5+</span></li>
+        <li><span>Paraffin wax</span><span>$10+</span></li>
+      </ul></div>
+    </div>
+
+    <div class="panel" id="p-facials">
+      <div class="pl"><h3>Facials</h3><ul>
+        <li><span>Signature facial<small>Customized to your skin, extractions if wanted, facial massage, hand or foot massage. 60 min.</small></span><span>$90</span></li>
+        <li><span>Extended facial<small>Signature plus hydrating eye masque, LED or ultrasonic cleansing, longer massage. 90 min.</small></span><span>$110</span></li>
+        <li><span>Clarifying facial<small>Deep pore cleansing for acne-prone skin. Great for teens. 90 min.</small></span><span>$110</span></li>
+        <li><span>Microdermabrasion<small>Diamond-tip resurfacing for texture and fine lines. 50 min. Series of 6: $600.</small></span><span>$120</span></li>
+      </ul></div>
+      <div class="pl"><h3>Treatments &amp; add-ons</h3><ul>
+        <li><span>Dermaplaning<small>Exfoliates and removes peach fuzz for a smooth, glowing finish. 45 min. Add to a facial for $30.</small></span><span>$75</span></li>
+        <li><span>LED treatment add-on<small>Red for collagen, blue for breakouts. 30 min.</small></span><span>$30</span></li>
+        <li><span>Chemical peel</span><span>$95</span></li>
+        <li><span>Chemical peel series<small>Pre-treatment products 15% off with a series.</small></span><span>$260</span></li>
+      </ul></div>
+    </div>
+
+    <div class="panel" id="p-massage">
+      <div class="pl"><h3>Massage</h3><ul>
+        <li><span>60-minute massage</span><span>$80</span></li>
+        <li><span>90-minute massage</span><span>$115</span></li>
+        <li><span>Deep tissue add-on</span><span>$15</span></li>
+        <li><span>Hot stone add-on</span><span>$25</span></li>
+        <li><span>Cupping therapy</span><span>$30</span></li>
+      </ul></div>
+      <div class="pl"><h3>Body</h3><ul>
+        <li><span>Body scrub &amp; wrap<small>Dry brushing, sugar scrub, rinse under the Vichy shower, then a coconut, shea and beeswax wrap. 60 min.</small></span><span>$100</span></li>
+      </ul><p class="note">Spa, extension and lash services take a 50% deposit at booking. Please give 24 hours' notice to change an appointment.</p></div>
+    </div>
+
+    <div class="panel" id="p-lashes">
+      <div class="pl"><h3>Classic extensions</h3><ul>
+        <li><span>Full set</span><span>$175</span></li>
+        <li><span>Spot fill</span><span>$35</span></li>
+        <li><span>1-week fill</span><span>$45</span></li>
+        <li><span>2-week fill</span><span>$50</span></li>
+        <li><span>3-week fill</span><span>$65</span></li>
+        <li><span>4-week fill</span><span>$95</span></li>
+      </ul></div>
+      <div class="pl"><h3>Volume &amp; lifts</h3><ul>
+        <li><span>Volume full set</span><span>$200</span></li>
+        <li><span>Volume spot fill</span><span>$45</span></li>
+        <li><span>Volume 1 / 2 / 3 / 4-week fill</span><span>$55 / 65 / 75 / 100</span></li>
+        <li><span>Removal</span><span>$35</span></li>
+        <li><span>Lash lift</span><span>$45</span></li>
+        <li><span>Lash tint</span><span>$20</span></li>
+        <li><span>Lift &amp; tint</span><span>$60</span></li>
+      </ul><p class="note">Bella Lash premium faux-mink extensions. Natural or full drama, your call.</p></div>
+    </div>
+
+    <div class="panel" id="p-waxing">
+      <div class="pl"><h3>Face</h3><ul>
+        <li><span>Brow</span><span>$15</span></li>
+        <li><span>Lip</span><span>$12</span></li>
+        <li><span>Chin</span><span>$12</span></li>
+        <li><span>Lip &amp; brow</span><span>$25</span></li>
+        <li><span>Lip &amp; chin</span><span>$20</span></li>
+        <li><span>Full face</span><span>$35</span></li>
+        <li><span>Nostrils</span><span>$15</span></li>
+        <li><span>Neck / hairline</span><span>$20</span></li>
+        <li><span>Eyebrow makeover<small>Trimmed, waxed into shape and tinted to look fuller.</small></span><span>$30</span></li>
+      </ul></div>
+      <div class="pl"><h3>Body</h3><ul>
+        <li><span>Underarm</span><span>$25</span></li>
+        <li><span>Half arm / full arm</span><span>$30 / $40</span></li>
+        <li><span>Half leg / full leg</span><span>$45 / $70</span></li>
+        <li><span>Bikini</span><span>$35</span></li>
+        <li><span>Brazilian</span><span>$65</span></li>
+        <li><span>Full leg &amp; bikini</span><span>$95</span></li>
+        <li><span>Back</span><span>$60</span></li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="spa" id="spa">
+  <div class="wrap spa-grid">
+    <img src="https://static.wixstatic.com/media/b6c1e7_6d414c6ae14f4ae69088c99bc55f9cfe~mv2.jpg/v1/fill/w_700,h_800,al_c,q_85/spa.jpg" alt="Candles and towels in the spa">
+    <div>
+      <div class="eyebrow">Spa days</div>
+      <h2>Take the whole afternoon</h2>
+      <p style="margin-top:1rem;opacity:.9">Our spa packages stack massage, skin, nails and hair into one booking. Bring a friend, your mom, or nobody at all.</p>
+      <div class="pk">
+        <div><div><b>Deluxe Spa Day</b><small>Body scrub, 1-hour massage, custom facial, deluxe pedicure, spa manicure, shampoo and blow dry. Lunch included. About 6 hours.</small></div><span class="pr">$325</span></div>
+        <div><div><b>Spa Getaway</b><small>1-hour massage, custom facial and spa pedicure. About 3 hours.</small></div><span class="pr">$190</span></div>
+        <div><div><b>Crush Escape</b><small>Your pick of a 1-hour massage or custom facial, followed by a deluxe pedicure.</small></div><span class="pr">$125</span></div>
+        <div><div><b>Crush Special</b><small>Choose a 1-hour massage or custom facial, plus a body scrub or spa manicure.</small></div><span class="pr">$110</span></div>
+      </div>
+      <a class="btn btn-light" style="margin-top:1.6rem" href="tel:+19706281732">Call to book a spa day</a>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="team">
+  <div class="sec-head">
+    <div><div class="eyebrow">The team</div><h2>Meet your stylists</h2></div>
+    <p>Licensed, experienced, and still taking classes. Follow them to see what's coming out of the chair this week.</p>
+  </div>
+  <div class="team">
+    <div class="member">
+      <img src="https://static.wixstatic.com/media/b6c1e7_13dfc7dde9264b3095cd77b3bb525744~mv2.jpg/v1/fill/w_520,h_650,al_c,q_85/sammi.jpg" alt="Sammi Payne">
+      <h3>Sammi Payne</h3>
+      <div class="role">Owner · Cosmetologist</div>
+      <p>Licensed since 2005 and in love with blondes ever since. Sammi is known for honest consultations and custom color that holds up. Cuts, color, Brazilian blowouts, and fusion or tape-in extensions. Twenty years in, her clients still don't go anywhere else.</p>
+      <a class="ig" href="https://instagram.com/fxygem">@fxygem</a>
+    </div>
+    <div class="member">
+      <img src="https://static.wixstatic.com/media/b6c1e7_39a75270b0994d67a09314609aeef861~mv2.jpg/v1/fill/w_520,h_650,al_c,q_85/jessica.jpg" alt="Jessica">
+      <h3>Jessica</h3>
+      <div class="role">Cosmetologist · Lash artist</div>
+      <p>Doing hair since 2010 and lashes since 2011, when she was the fourth person in Grand Junction offering extensions. Highlights, lowlights, foils and balayage, and she will match your inspiration photo. Classic and volume lashes.</p>
+      <a class="ig" href="https://instagram.com/jessicabeiriger">@jessicabeiriger</a>
+    </div>
+    <div class="member">
+      <div class="ph" aria-label="Photo coming soon">B</div>
+      <h3>Brittany</h3>
+      <div class="role">Cosmetologist · Newest to the team</div>
+      <p>The newest addition to Crush. Brittany is now booking new clients, so if you've been waiting for an opening, this is it.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="two">
+    <div class="block">
+      <div class="eyebrow">Reviews</div>
+      <div class="stars">★★★★★</div>
+      <h2>Hear it from our clients</h2>
+      <p>Our Google reviews are written by real clients who sat in these chairs. Read them, and if you've been in lately, add yours. It takes a minute and it means a lot to a small shop.</p>
+      <a class="btn btn-primary" href="https://g.page/r/CZ5-cHUg56r2EBM/review">Leave a Google review</a>
+    </div>
+    <div class="block dark" id="hiring">
+      <div class="eyebrow">We're hiring</div>
+      <h2>Experienced stylists who are hungry to work</h2>
+      <p>Sammi and Jessica have 35+ combined years behind the chair and they teach. Blonding, extensions, lashes, building a book that stays full. If you're licensed, driven, and want mentorship instead of just a station, we want to talk. Recent grads from Salon Professional Academy, IntelliTec and CMU welcome.</p>
+      <a class="btn btn-light" href="tel:+19706281732">Call Sammi · (970) 628-1732</a>
+    </div>
+  </div>
+</section>
+
+<section class="wrap visit" id="visit">
+  <div class="visit-grid">
+    <div>
+      <div class="eyebrow">Visit</div>
+      <h2>Valley Plaza, on US-6 &amp; 50</h2>
+      <p class="addr">2454 US-6 &amp; 50, Suite 102<br>Grand Junction, CO 81505</p>
+      <p style="margin-top:.8rem"><a class="big" href="tel:+19706281732">(970) 628-1732</a></p>
+      <ul class="hours">
+        <li><span>Monday</span><span>By appointment</span></li>
+        <li><span>Tuesday – Saturday</span><span>10:00 am – 6:00 pm</span></li>
+        <li><span>Sunday</span><span>Closed</span></li>
+      </ul>
+      <div class="cta" style="display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.6rem">
+        <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=Crush+Salon+%26+Day+Spa+2454+US-6+%26+50+%23102+Grand+Junction+CO+81505">Get directions</a>
+        <a class="btn btn-ghost" href="https://instagram.com/crushsalondayspa">Instagram</a>
+        <a class="btn btn-ghost" href="https://facebook.com/crush970">Facebook</a>
+      </div>
+      <p class="note" style="margin-top:2rem"><strong>Good to know.</strong> Please give 24 hours' notice if you need to move an appointment so you're not charged. Spa, permanent makeup, hair extension and lash extension bookings take a 50% deposit, invoiced to your email and due within 48 hours.</p>
+    </div>
+    <img src="https://static.wixstatic.com/media/b6c1e7_6bcab172d9b1452592a2f24098c66263~mv2.jpg/v1/fill/w_700,h_760,al_c,q_85/inside.jpg" alt="Inside Crush Salon">
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Crush Salon &amp; Day Spa · Grand Junction, Colorado</span>
+    <span><a href="https://book.squareup.com/appointments/763bb7c7-40e5-450f-980e-d199f9eb9685/location/70V0BRZFX04NW/services">Book online</a> · <a href="tel:+19706281732">(970) 628-1732</a> · <a href="https://instagram.com/crushsalondayspa">@crushsalondayspa</a></span>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var btn=document.getElementById('menuBtn'),links=document.getElementById('links');
+  btn.addEventListener('click',function(){var o=links.classList.toggle('open');btn.setAttribute('aria-expanded',o);btn.textContent=o?'Close':'Menu';});
+  links.addEventListener('click',function(e){if(e.target.tagName==='A'){links.classList.remove('open');btn.textContent='Menu';}});
+  function show(id){
+    document.querySelectorAll('.tab').forEach(function(t){t.setAttribute('aria-selected',t.dataset.panel===id);});
+    document.querySelectorAll('.panel').forEach(function(p){p.classList.toggle('on',p.id==='p-'+id);});
+  }
+  document.querySelectorAll('.tab').forEach(function(t){t.addEventListener('click',function(){show(t.dataset.panel);});});
+  document.querySelectorAll('.card[data-tab]').forEach(function(c){c.addEventListener('click',function(){show(c.dataset.tab);});});
+})();
+</script>
+</body>
+</html>
